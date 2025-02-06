@@ -6,13 +6,17 @@
 /*   By: qtay <qtay@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 13:35:44 by qtay              #+#    #+#             */
-/*   Updated: 2024/11/14 13:59:04 by qtay             ###   ########.fr       */
+/*   Updated: 2025/02/06 12:24:32 by qtay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef WHATEVER_HPP
 # define WHATEVER_HPP
 
+/**
+ * Note: 'typename' keyword can also be replaced by the keyword 'class'
+ * Templates are expanded at compile time after type checking
+ */
 template <typename T>
 void swap(T &x, T &y)
 {

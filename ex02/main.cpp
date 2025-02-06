@@ -6,7 +6,7 @@
 /*   By: qtay <qtay@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 16:45:00 by qtay              #+#    #+#             */
-/*   Updated: 2024/11/14 18:02:40 by qtay             ###   ########.fr       */
+/*   Updated: 2025/02/06 14:12:31 by qtay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,10 @@ int	main()
 	{
 		Array<int> arr2(5);
 		cout << "arr2 size: " << arr2.size() << endl;
+		cout << "arr2 is initialized to: [ ";
+		for (size_t i = 0; i < arr2.size(); i++)
+			cout << arr2[i] << " ";
+		cout << "]" << endl;
 	}
 	catch(const std::exception& e)
 	{
@@ -99,6 +103,7 @@ int	main()
 	try
 	{
 		Array<int> arr3(5);
+		cout << "Filling arr3 with some values..." << endl;
 		for (size_t i = 0; i < arr3.size(); i++)
 			arr3[i] = static_cast<int>(i * 3);
 		Array<int> temp(arr3); // temp copies from arr3
@@ -133,11 +138,12 @@ int	main()
 	{
 		Array<int> arr4(5);
 		Array<int> temp2(3);
+		cout << "Filling arr4 with some values..." << endl;
 		for (size_t i = 0; i < arr4.size(); i++)
 			arr4[i] = i + 1;
-		cout << "temp 2 array size before assignment is " << temp2.size() << endl;
+		cout << "temp2 array size before assignment is " << temp2.size() << endl;
 		temp2 = arr4;
-		cout << "temp 2 array size after assignment is " << temp2.size() << endl;
+		cout << "temp2 array size after assignment is " << temp2.size() << endl;
 		cout << "Modifying temp2 should not affect arr4: " << endl;
 		for (size_t i = 0; i < temp2.size(); i++)
 			temp2[i] = 0;
